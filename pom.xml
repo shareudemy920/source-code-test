@@ -30,7 +30,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<classifier>---- select project type ----</classifier>
+					<CloudhubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${mule.version}</muleVersion>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<environment>${env}</environment>
+						<applicationName>${appname}</applicationName>
+						<businessGroup>${business}</businessGroup>
+						<workerType>${vCore}</workerType>
+						<workers>${workers}</workers>
+						<objectStoreV2>true</objectStoreV2>
+					</CloudhubDeployment>
+					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
 		</plugins>
